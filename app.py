@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from flask import Flask, request, abort
 from linebot.v3.messaging import MessagingApi, Configuration
 from linebot.v3.webhook import WebhookHandler
@@ -36,3 +37,15 @@ def handle_message(event: MessageEvent):
 
 if __name__ == "__main__":
     app.run(port=5000)
+=======
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return "こんにちはこれはスマホでも開けるWebアプリです"
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+>>>>>>> c4d3048 (初回アップロード)
